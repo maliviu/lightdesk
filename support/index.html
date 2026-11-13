@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LightDesk — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 1.8em; margin-bottom: 0.2em; }
+  h2 { font-size: 1.2em; margin-top: 1.8em; }
+  a { color: #087e8b; }
+  @media (prefers-color-scheme: dark) { a { color: #4fc3cf; } }
+</style>
+</head>
+<body>
+<h1>LightDesk — Support</h1>
+<p>LightDesk controls Insteon lights and scenes through a Universal Devices ISY994i controller on your home Wi-Fi. It talks to the controller directly, with no cloud service in between.</p>
+
+<h2>Contact</h2>
+<p>Questions, problems or suggestions: <a href="mailto:solomon_lindsey@yahoo.com">solomon_lindsey@yahoo.com</a></p>
+
+<h2>Getting started</h2>
+<ol>
+  <li>Open the <strong>Settings</strong> tab. Enter your ISY’s IP address (for example 192.168.1.95), port 80, and your ISY username and password, then tap <strong>Connect to ISY</strong>.</li>
+  <li>The first time, iOS asks for <strong>Local Network</strong> access. Tap <strong>Allow</strong>.</li>
+  <li>Open <strong>Add Lights</strong> and tap <strong>Add</strong> on the lights and scenes you want.</li>
+  <li>Open <strong>Lights</strong>. Tap a tile to switch a light; use the slider button on a dimmer for brightness; scenes have their own On and Off buttons.</li>
+</ol>
+<p>No controller at hand? <strong>Settings ▸ Try Demo Mode</strong> simulates a small home and sends nothing over the network.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>“Cannot reach the ISY”.</h3>
+<p>Check that your iPhone or iPad is on the same Wi-Fi network as the ISY, and that the address is the ISY’s local IP address without “http://”. Then check iOS <strong>Settings ▸ Privacy &amp; Security ▸ Local Network</strong> and make sure LightDesk is switched on. If you tapped “Don’t Allow” the first time, this is where you change it.</p>
+
+<h3>Where do I find the ISY’s IP address?</h3>
+<p>In your router’s list of connected devices, or in the ISY Admin Console. It helps to give the ISY a fixed address in the router so it does not change.</p>
+
+<h3>“Authentication failed (HTTP 401)”.</h3>
+<p>The username or password is wrong. They are the same ones you use for the ISY Admin Console (the factory default username is “admin”).</p>
+
+<h3>Should I switch on HTTPS?</h3>
+<p>Usually not. The ISY994i uses an old self-signed certificate and old encryption that iOS often refuses. On your own home Wi-Fi, plain HTTP on port 80 is the dependable choice. Be aware that HTTP sends the login unencrypted over your Wi-Fi, so use it only on a network you trust.</p>
+
+<h3>A light is missing from Add Lights.</h3>
+<p>Keypad buttons, sensors, remotes and disabled nodes are hidden because they cannot be switched directly. Switch off <strong>Hide buttons, sensors &amp; disabled nodes</strong> to see everything, or tap the refresh button to read the list from the ISY again.</p>
+
+<h3>A tile says “Not responding” or the command failed.</h3>
+<p>The ISY did not get an answer from that device over Insteon. Check the device and its power, or restore it in the ISY Admin Console. Keypad buttons cannot be switched directly: control the scene the button belongs to instead.</p>
+
+<h3>How do I dim a light?</h3>
+<p>Tap the slider button on the tile. If a dimmer has no slider button, press and hold the tile and switch on <strong>Dimmer</strong>.</p>
+
+<h3>What do Fast On and Fast Off do?</h3>
+<p>They switch the light immediately to full brightness or off, skipping the ramp. Press and hold a tile to find them.</p>
+
+<h3>Does it work away from home?</h3>
+<p>No. LightDesk talks to the ISY on your local network only.</p>
+
+<h3>How do I report a problem?</h3>
+<p>Open <strong>Settings ▸ Activity log</strong>, tap the share button and send the log to the address above. It lists every command and the ISY’s replies. It does not contain your password.</p>
+
+<h2>Privacy</h2>
+<p>LightDesk has no accounts, ads, analytics or tracking, and connects only to your own controller. See the <a href="../privacy/">privacy policy</a>.</p>
+
+<p><small>LightDesk is an independent app and is not affiliated with Universal Devices, Inc. or Insteon.</small></p>
+</body>
+</html>
